@@ -20,11 +20,11 @@
                                 <rect key="frame" x="10" y="93" width="394" height="774"/>
                                 <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="defaultCell" rowHeight="52" id="Lda-Sh-Q5N">
-                                        <rect key="frame" x="0.0" y="44.5" width="394" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="defaultCell" focusStyle="custom" rowHeight="84" id="Lda-Sh-Q5N">
+                                        <rect key="frame" x="0.0" y="44.5" width="394" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lda-Sh-Q5N" id="nBk-i5-iLh">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -34,10 +34,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pTn-l3-6HX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="70R-XR-GuL"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="pTn-l3-6HX" secondAttribute="bottom" constant="-5" id="QZy-0h-rZu"/>
-                            <constraint firstItem="pTn-l3-6HX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="giB-ZR-oSf"/>
-                            <constraint firstItem="pTn-l3-6HX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xke-ar-W0I"/>
+                            <constraint firstItem="pTn-l3-6HX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ovz-uR-Ql7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pTn-l3-6HX" secondAttribute="bottom" constant="-5" id="fX4-z6-nrp"/>
+                            <constraint firstItem="pTn-l3-6HX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mDG-4O-U4Y"/>
+                            <constraint firstItem="pTn-l3-6HX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nk7-px-JZq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ListApp" id="XBN-l6-ikK">
@@ -69,10 +69,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kcL-6u-Xi7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                            <color key="textColor" systemColor="systemGreenColor"/>
                         </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -88,8 +89,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

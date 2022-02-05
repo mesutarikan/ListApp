@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    
+   
     @IBOutlet weak var tableView : UITableView!
     var data = [NSManagedObject]()
     
@@ -84,15 +84,28 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cellColor = [UIColor(red: 0.95, green: 0.77, blue: 0.68, alpha: 1.00),UIColor(red: 0.93, green: 0.87, blue: 0.82, alpha: 1.00),UIColor(red: 0.81, green: 0.82, blue: 0.76, alpha: 1.00),UIColor(red: 0.57, green: 0.69, blue: 0.71, alpha: 1.00),UIColor(red: 0.21, green: 0.27, blue: 0.36, alpha: 1.00),UIColor(red: 0.75, green: 0.82, blue: 0.87, alpha: 1.00)]
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
+       
+            cell.separatorInset.left = 20.0
+            cell.separatorInset.right = 20.0
+            cell.separatorInset.top = 20.0
+            cell.separatorInset.bottom = 20.0
+            cell.layer.borderWidth = 4
+            cell.layer.cornerRadius = 18.0
+            cell.layer.masksToBounds = true
+        cell.layer.borderColor = UIColor.white.cgColor
+            //cell.clipsToBounds = true
+            
         
         cell.backgroundColor = cellColor[indexPath.row % cellColor.count]
         let listItem = data[indexPath.row]
         cell.textLabel?.text = listItem.value(forKey: "title") as! String
+        
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
+    
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .normal, title: "Sil") { _, _, _ in
@@ -104,6 +117,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             self.getData()
         }
         deleteAction.backgroundColor = .systemRed
+    
         // düzenAction.backgroundColor = .systemOrange
         let editAction = UIContextualAction(style: .normal, title: "Düzenle") { _, _, _ in
             
